@@ -33,13 +33,19 @@ def main():
 
     if st.button("Search Weather") or city_input:
         if city_input:
-            data, error = get_weather_data(city_input)
-
+            with st.spinner('Fetching data...'):
+                data, error = get_weather_data(city_input)
             if error:
                 st.error(error)
             else:
                 st.success(f"Weather in {data['name']}")
                 st.metric("Temperature", f"{data['main']['temp']} °C")
+
+                lat = data['coord']['lat']
+                lon = data['coord']['lon']
+                with st.expander("📍 View City Location on Map"):
+                    map_url = f"https://www.google.com/maps?q={lat},{lon}&hl=en&z=10&output=embed"
+                    components.iframe(map_url, height=400)
         else:
             st.warning("Please enter a city name.")
 ############################################################
