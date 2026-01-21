@@ -39,7 +39,7 @@ def main():
             if error:
                 st.error(error)
             else:
-                st.success(f"Weather in {data['name']}")
+                st.success(f"Weather in {data['name']}",{data['sys']['country']}")
                 st.metric("Temperature", f"{data['main']['temp']} °C")
 
                 lat = data['coord']['lat']
