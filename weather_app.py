@@ -1,5 +1,6 @@
 import requests
 import streamlit as st
+import streamlit.components.v1 as components
 ############################################################
 def get_weather_data(city):
     API_KEY = "955cbe94527907ffa1f5581810bd7deb"
