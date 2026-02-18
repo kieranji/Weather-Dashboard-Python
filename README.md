@@ -1,1 +1,2 @@
 # Weather-Dashboard-Python
+During the Christmas break, I registered an account with OpenWeather and obtained a free API, then completed the code logic portion of the program. However, designing the UI was entirely new territory for me, so I had an AI teach me how to design web interfaces. Later, I also integrated Google Maps geolocation into the interface to ensure users wouldn't get confused by similarly named locations when using the app.
